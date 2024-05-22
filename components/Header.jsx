@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Button } from "./ui/button"
 import Nav from "./Nav"
+import MobileNav from "./MobileNav"
 
 export default function Header() {
     return (
@@ -23,7 +24,9 @@ export default function Header() {
                 </div>
 
                 {/* mobile nav */} 
-                <div className="lg:hidden">mobile</div>
+                <div className="lg:hidden">
+                    <MobileNav />
+                </div>
             </div>
         </header>
     )
