@@ -41,7 +41,7 @@ export default function MobileNav() {
             </SheetTrigger>
             <SheetContent className="flex flex-col">
                 {/* logo */}
-                <div className="mt-32 mb-20 text-center text-2xl">
+                {/* <div className="mt-32 mb-20 text-center text-2xl">
                     <Link href={'/'}>
                         <h1 className="text-4xl font-semibold">
                             B
@@ -49,9 +49,9 @@ export default function MobileNav() {
                             tongheng
                         </h1>
                     </Link>
-                </div>
+                </div> */}
                 {/* Nav */}
-                <nav className="flex flex-col justify-center items-center gap-8">
+                <nav className="mt-36 flex flex-col justify-center items-center gap-10">
                     {links.map(link =>
                         <Link
                             key={link.name}
