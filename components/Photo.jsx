@@ -10,28 +10,34 @@ export default function Photo() {
                 initial={{ opacity: 0 }}
                 animate={{
                     opacity: 1,
-                    transition: { delay: 0.5, duration: 0.3, ease: "easeIn" }
+                    transition: { delay: 0.3, duration: 0.3, ease: "easeIn" }
                 }}>
                 {/* image */}
                 <motion.div
                 initial={{ opacity: 0 }}
                 animate={{
                     opacity: 1,
-                    transition: { delay: 1.2, duration: 0.3, ease: "easeInOut" }
+                    transition: { delay: 0.6, duration: 0.3, ease: "easeInOut" }
                 }}
-                className="h-[298px] w-[298px] lg:w-[498px] lg:h-[498px] mix-blend-lighten absolute">
+                className="h-[298px] w-[298px] lg:w-[498px] lg:h-[498px] mix-blend-lighten
+                absolute">
                     <Image
                         src="/assets/photo.png"
                         priority
                         quality={100}
                         fill
-                        alt="photo"
+                        alt="hi"
                         className="object-contain" />
                 </motion.div>
 
                 {/* circle */}
                 <motion.svg
-                 className="w-[300px lg:w-[506px] h-[300px lg:h-[506px]"
+                initial={{ opacity: 0 }}
+                animate={{
+                    opacity: 1,
+                    transition: { delay: 0.9, duration: 0.3, ease: "easeInOut" }
+                }}
+                 className="w-[300px] lg:w-[506px] h-[300px] lg:h-[506px]"
                  fill="transparent"
                  viewBox="0 0 506 506"
                  xmls="http://www.w3.org/2000/svg"
@@ -50,7 +56,7 @@ export default function Photo() {
                             rotate: [120, 360],
                         }}
                         transition={{
-                            duration: 2,
+                            duration: 20,
                             repeat: Infinity,
                             repeatType: "reverse",}}
                     />
