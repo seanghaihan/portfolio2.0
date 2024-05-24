@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <main>
-      Homepage
-    </main>
+    <section className="h-full">
+      <div className="container mx-auto">HomePage</div>
+    </section>
   )
 }
