@@ -3,16 +3,20 @@ import { FiFacebook, FiInstagram, FiGithub } from "react-icons/fi"
 
 const socials = [
     {
-        icon: <FiFacebook />, path: ""
+        icon: <FiFacebook />,
+        path: ""
     },
     {
-        icon: <FiInstagram />, path: ""
+        icon: <FiInstagram />,
+        path: ""
     },
     {
-        icon: <FiGithub />, path: ""
+        icon: <FiGithub />,
+        path: ""
     },
     {
-        icon: <FiFacebook />, path: ""
+        icon: <FiFacebook />,
+        path: ""
     },
 ]
 

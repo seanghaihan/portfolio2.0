@@ -26,7 +26,7 @@ export default function Stats() {
     <div className="container mx-auto">
         <div className="flex flex-wrap gap-6 max-w-[60vw] mx-auto lg:max-w-none">
             {stats.map(item => 
-                <div className="flex-1 flex gap-4 items-center justify-center lg:justify-start">
+                <div key={item.num} className="flex-1 flex gap-4 items-center justify-center lg:justify-start">
                     <CountUp
                     end={item.num}
                     duration={3}
