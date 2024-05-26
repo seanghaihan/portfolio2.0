@@ -26,14 +26,6 @@ const skills = {
       name: "JavaScript",
     },
     {
-      icon: <FaReact />,
-      name: "React JS",
-    },
-    {
-      icon: <FaFigma />,
-      name: "Figma",
-    },
-    {
       icon: <SiTailwindcss />,
       name: "Tailwind CSS",
     },
@@ -41,13 +33,20 @@ const skills = {
       icon: <SiNextdotjs />,
       name: "Next JS",
     },
+    {
+      icon: <FaReact />,
+      name: "React JS",
+    },
+    {
+      icon: <FaFigma />,
+      name: "Figma",
+    },
 
   ]
 }
 
 // about data
-const about = [
-  {
+const about = {
     title: "About me",
     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam facilis rem ut animi eum aspernatur sequi id quaerat',
     info: [
@@ -79,10 +78,12 @@ const about = [
         fieldName: "Freelancer",
         fieldValue: "Available",
       },
-    
+      {
+        fieldName: "Languages",
+        fieldValue: "Khmer, English",
+      },
     ]
-  }
-]
+}
 
 // experience data
 const experience = {
@@ -153,7 +154,7 @@ export default function Resume() {
   >
     <div className="container mx-auto">
       <Tabs
-        defaultValue="skills"
+        defaultValue="about"
         className="flex flex-col lg:flex-row gap-[60px]"
       >
         <TabsList className="flex flex-col gap-6 w-full max-w-[380px] mx-auto lg:mx-0">
@@ -227,13 +228,13 @@ export default function Resume() {
               <p className="max-w-[600px] text-white/60 mx-auto lg:mx-0">
                 {skills.desc}
               </p>
-            <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:gap-[30px]">
+            <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:gap-[30px] gap-4">
                   {skills.skillList.map(skill => 
                     <li key={skill.name}>
-                      <TooltipProvider>
+                      <TooltipProvider delayDuration={100}>
                       <Tooltip>
-                        <TooltipTrigger>
-                        {skill.icon}
+                        <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-lg flex justify-center items-center group">
+                        <div className="text-6xl group-hover:text-accent transition-all duration-300">{skill.icon}</div>
                         </TooltipTrigger>
                         <TooltipContent>
                         {skill.name}
@@ -247,8 +248,25 @@ export default function Resume() {
           </TabsContent>
           
           {/* About me */}
-          <TabsContent value="about" className="w-full">
-            About me
+          <TabsContent value="about" className="w-full text-center lg:text-left">
+            <div className="flex flex-col gap-[30px]">
+            <h3 className="text-4xl font-bold">
+              {about.title}
+              </h3>
+              <p className="max-w-[600px] text-white/60 mx-auto lg:mx-0">
+                {about.desc}
+              </p>
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto lg:mx-0">
+                  {about.info.map((item, index) =>
+                    <li
+                    key={index}
+                    className="flex items-center justify-center lg:justify-start gap-4">
+                      <span className="text-white/60">{item.fieldName}</span>:
+                      <span className="text-xl">{item.fieldValue}</span>
+                    </li>
+                  )}
+                </ul>
+              </div>
           </TabsContent>
         </div>
       </Tabs>
