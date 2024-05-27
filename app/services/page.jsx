@@ -10,25 +10,25 @@ export default function Services() {
     {
       num: "01",
       title: "UX/UI Design",
-      desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit, labore et dolore magna aliqua.",
+      desc: "Design or Redesign a website, a mobile app, responsive website design",
       href: "",
     },
     {
       num: "02",
       title: "Front-End",
-      desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit, labore et dolore magna aliqua.",
+      desc: "A Front-end web design using Html 5, Css 3, Javascript or Next JS",
       href: "",
     },
     {
       num: "03",
       title: "Graphic Design",
-      desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit, labore et dolore magna aliqua.",
+      desc: "A social media post, web banner, lower third, logo, branding",
       href: "",
     },
     {
       num: "04",
       title: "Motion Design",
-      desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit, labore et dolore magna aliqua.",
+      desc: "An Animation gif, a motion video, Intro, Outro ",
       href: "",
     },
   ]

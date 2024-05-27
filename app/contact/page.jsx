@@ -11,7 +11,7 @@ const info = [
   {
     icon: <FaPhoneAlt />,
     name: "Phone",
-    value: "+852 9123 4567",
+    value: "+855 966 636 776",
   },
   {
     icon: <FaEnvelope />,
@@ -21,7 +21,7 @@ const info = [
   {
     icon: <FaMapMarkedAlt />,
     name: "Address",
-    value: "123456,Cambodia",
+    value: "Phnom Penh,Cambodia",
   },
 ]
 
