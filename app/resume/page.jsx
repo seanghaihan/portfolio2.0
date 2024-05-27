@@ -1,7 +1,7 @@
 "use client"
 
 import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma } from "react-icons/fa"
-import { SiTailwindcss,SiNextdotjs } from "react-icons/si";
+import { SiTailwindcss,SiNextdotjs, SiAdobephotoshop,SiAdobeillustrator,SiAdobeaftereffects } from "react-icons/si";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
@@ -11,7 +11,7 @@ import {motion} from "framer-motion"
 // skill data
 const skills = {
   title: "My Skill",
-  desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam facilis rem ut animi eum aspernatur sequi id quaerat',
+  desc: `There are the tools that I used`,
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -34,12 +34,20 @@ const skills = {
       name: "Next JS",
     },
     {
-      icon: <FaReact />,
-      name: "React JS",
-    },
-    {
       icon: <FaFigma />,
       name: "Figma",
+    },
+    {
+      icon: <SiAdobephotoshop />,
+      name: "Adobephotoshop",
+    },
+    {
+      icon: <SiAdobeillustrator />,
+      name: "Adobeillustrator",
+    },
+    {
+      icon: <SiAdobeaftereffects />,
+      name: "Adobeaftereffects",
     },
 
   ]
@@ -48,7 +56,7 @@ const skills = {
 // about data
 const about = {
     title: "About me",
-    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam facilis rem ut animi eum aspernatur sequi id quaerat',
+    desc: `I'm a graphic design that I can do many thing such as "Graphic Design, Motion Graphic, UX/UI and Front-end as my hobbies"`,
     info: [
       {
         fieldName: "Name",
@@ -56,23 +64,15 @@ const about = {
       },
       {
         fieldName: "Phone",
-        fieldValue: "+855 999 888 777",
+        fieldValue: "+855 966 636 776",
       },
       {
         fieldName: "Exprience",
         fieldValue: "4+ years",
       },
       {
-        fieldName: "Github",
-        fieldValue: "Btongheng",
-      },
-      {
         fieldName: "Nataionality",
         fieldValue: "Cambodian",
-      },
-      {
-        fieldName: "Email",
-        fieldValue: "Btongheng@gmail.com",
       },
       {
         fieldName: "Freelancer",
@@ -82,39 +82,33 @@ const about = {
         fieldName: "Languages",
         fieldValue: "Khmer, English",
       },
+      {
+        fieldName: "Email",
+        fieldValue: "Btongheng@gmail.com",
+      },
     ]
 }
 
 // experience data
 const experience = {
   icon: '/assets/resume/badge.svg',
-  title: "My experience",
-  desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam facilis rem ut animi eum aspernatur sequi id quaerat',
+  title: "My Experience",
+  desc: `I'm working as a graphic designer since I am Year 2 in University`,
   items: [
     {
-      company: 'Google',
-      position: 'Software Engineer',
+      company: 'Privata Company',
+      position: 'UX/UI',
+      duration: '2023 - Present',
+    },
+    {
+      company: 'Privata Company',
+      position: 'Motion Graphic',
       duration: '2022 - Present',
     },
     {
-      company: 'Google 2',
-      position: 'Software Engineer',
-      duration: '2021 - Present',
-    },
-    {
-      company: 'Google 3',
-      position: 'Software Engineer',
-      duration: '2021 - Present',
-    },
-    {
-      company: 'Google 3',
-      position: 'Software Engineer',
-      duration: '2021 - Present',
-    },
-    {
-      company: 'Google 3',
-      position: 'Software Engineer',
-      duration: '2021 - Present',
+      company: 'Privata Company',
+      position: 'Graphic Design',
+      duration: '2020 - Present',
     },
   ]
 }
@@ -123,19 +117,28 @@ const experience = {
 const education = {
   icon: '/assets/resume/cap.svg',
   title: "My Education",
-  desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam facilis rem ut animi eum aspernatur sequi id quaerat',
+  desc: 'These are my education',
   items: [
     {
-      institution: 'NIB',
-      degree: 'IT',
+      institution: 'National Institute Of Business',
+      degree: 'Information Technology',
       duration: '2018 - 2024',
     },
     {
-      institution: 'PPT',
+      institution: 'Hunsen Phnom Penh Thmey High school',
       degree: 'High School',
       duration: '2015 - 2018',
     },
-    
+    {
+      institution: 'Hunsen Phnom Penh Thmey High school',
+      degree: 'Secondary School',
+      duration: '2012 - 2015',
+    },
+    {
+      institution: 'Phnom Penh Thmey Primary School',
+      degree: 'Primary School',
+      duration: '2006 - 2012',
+    },
   ]
 }
 
@@ -154,7 +157,7 @@ export default function Resume() {
   >
     <div className="container mx-auto">
       <Tabs
-        defaultValue="about"
+        defaultValue="experience"
         className="flex flex-col lg:flex-row gap-[60px]"
       >
         <TabsList className="flex flex-col gap-6 w-full max-w-[380px] mx-auto lg:mx-0">
@@ -181,7 +184,7 @@ export default function Resume() {
                   {experience.items.map(item => 
                     <li key={item.company} className="bg-[#232329] h-[184px] py-6 px-10 rouned-lg flex flex-col justify-center items-center lg:items-start gap-1">
                       <span className="text-accent">{item.duration}</span>
-                      <h3 className="text-xl max-w-[260px] min-h-[42px] text-center lg:text-left">{item.position}</h3>
+                      <h3 className="text-xl min-h-[42px] text-center lg:text-left">{item.position}</h3>
                       <div className="flex items-center gap-3">
                         <span className="w-[6px] h-[6px] bg-accent rotate-45"></span>
                         <p className="text-white/60">{item.company}</p>
@@ -207,7 +210,7 @@ export default function Resume() {
                   {education.items.map(item => 
                     <li key={item.institution} className="bg-[#232329] h-[184px] py-6 px-10 rouned-lg flex flex-col justify-center items-center lg:items-start gap-1">
                       <span className="text-accent">{item.duration}</span>
-                      <h3 className="text-xl max-w-[260px] min-h-[42px] text-center lg:text-left">{item.degree}</h3>
+                      <h3 className="text-xl min-h-[42px] text-center lg:text-left">{item.degree}</h3>
                       <div className="flex items-center gap-3">
                         <span className="w-[6px] h-[6px] bg-accent rotate-45"></span>
                         <p className="text-white/60">{item.institution}</p>
@@ -260,7 +263,7 @@ export default function Resume() {
                   {about.info.map((item, index) =>
                     <li
                     key={index}
-                    className="flex items-center justify-center lg:justify-start gap-4">
+                    className="flex items-start justify-start lg:justify-start gap-4">
                       <span className="text-white/60">{item.fieldName}</span>:
                       <span className="text-xl">{item.fieldValue}</span>
                     </li>

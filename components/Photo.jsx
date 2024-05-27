@@ -19,7 +19,7 @@ export default function Photo() {
                     opacity: 1,
                     transition: { delay: 0.6, duration: 0.3, ease: "easeInOut" }
                 }}
-                className="h-[298px] w-[298px] lg:w-[498px] lg:h-[498px] mix-blend-lighten
+                className="h-[298px] w-[298px] lg:w-[380px] lg:h-[380px] mix-blend-lighten
                 absolute">
                     <Image
                         src="/assets/photo.png"
@@ -37,7 +37,7 @@ export default function Photo() {
                     opacity: 1,
                     transition: { delay: 0.9, duration: 0.3, ease: "easeInOut" }
                 }}
-                 className="w-[300px] lg:w-[506px] h-[300px] lg:h-[506px]"
+                 className="w-[300px] lg:w-[380px] h-[300px] lg:h-[380px]"
                  fill="transparent"
                  viewBox="0 0 506 506"
                  xmls="http://www.w3.org/2000/svg"

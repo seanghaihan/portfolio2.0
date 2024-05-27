@@ -7,16 +7,16 @@ import {FiDownload} from "react-icons/fi"
 export default function Home() {
 
   return (
-    <section className="h-full">
-      <div className="container mx-auto h-full">
+    <section className=" mt-10">
+      <div className="container mx-auto ">
         <div className="flex flex-col lg:flex-row items-center justify-between lg:pt-8 lg:pb-24">
               {/* text */}
               <div className="text-center lg:text-left order-2 lg:order-none">
-                <span className="text-xl">Graphic Designer</span>
-                <h1 className="h1">
-                  Hello I'm <br /><span className="text-accent">KonKhmer</span>
+                <span className="text-sm lg:text-2xl">Graphic Designer</span>
+                <h1 className="text-2xl lg:text-5xl">
+                  Hello I'm <span className="text-accent">KonKhmer</span>
                 </h1>
-                <p className="max-w-[500px] mb-9 text-white/80">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora fugiat maxime repellat iste dignissimos maiores sapiente? Enim, ullam?</p>
+                <p className="max-w-[500px] my-4 text-xs lg:text-sm text-white/80">I'm a graphic design that I can do many thing such as "Graphic Design, Motion Graphic, UX/UI and Front-end as my hobbies"</p>
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
                   <Button
                   variant="outline"
