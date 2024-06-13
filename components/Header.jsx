@@ -10,9 +10,9 @@ export default function Header() {
                 {/* logo */}
                 <Link href={'/'}>
                     <h1 className="text-4xl font-semibold">
-                        B
+                        Seanghai
                         <span className="text-accent">.</span>
-                        tongheng
+                        h
                     </h1>
                 </Link>
                 {/* desktop nav */}

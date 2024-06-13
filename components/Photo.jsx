@@ -22,12 +22,12 @@ export default function Photo() {
                 className="h-[298px] w-[298px] lg:w-[380px] lg:h-[380px] mix-blend-lighten
                 absolute">
                     <Image
-                        src="/assets/photo.png"
+                        src="/assets/profile.jpg"
                         priority
                         quality={100}
                         fill
                         alt="hi"
-                        className="object-contain" />
+                        className="object-contain rounded-full" />
                 </motion.div>
 
                 {/* circle */}
@@ -46,7 +46,7 @@ export default function Photo() {
                         cx="253"
                         cy="253"
                         r="250"
-                        stroke="#9945ff"
+                        stroke="#00fe87"
                         strokeWidth="4"
                         strokeLinecap="round"
                         strokeLinejoin="round"
