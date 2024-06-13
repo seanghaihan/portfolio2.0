@@ -8,6 +8,59 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { ScrollArea } from "@/components/ui/scroll-area"
 import {motion} from "framer-motion"
 
+// experience data
+const experience = {
+  icon: '/assets/resume/badge.svg',
+  title: "My Experience",
+  desc: `I'm working as a graphic designer since I am Year 2 in University`,
+  items: [
+    {
+      company: 'Privata Company',
+      position: 'UX/UI',
+      duration: '2023 - Present',
+    },
+    {
+      company: 'Privata Company',
+      position: 'Motion Graphic',
+      duration: '2022 - Present',
+    },
+    {
+      company: 'Privata Company',
+      position: 'Graphic Design',
+      duration: '2020 - Present',
+    },
+  ]
+}
+
+// education data
+const education = {
+  icon: '/assets/resume/cap.svg',
+  title: "My Education",
+  desc: 'These are my education',
+  items: [
+    {
+      institution: 'National Institute Of Business',
+      degree: 'Information Technology',
+      duration: '2018 - 2024',
+    },
+    {
+      institution: 'Hunsen Phnom Penh Thmey High school',
+      degree: 'High School',
+      duration: '2015 - 2018',
+    },
+    {
+      institution: 'Hunsen Phnom Penh Thmey High school',
+      degree: 'Secondary School',
+      duration: '2012 - 2015',
+    },
+    {
+      institution: 'Phnom Penh Thmey Primary School',
+      degree: 'Primary School',
+      duration: '2006 - 2012',
+    },
+  ]
+}
+
 // skill data
 const skills = {
   title: "My Skill",
@@ -89,58 +142,7 @@ const about = {
     ]
 }
 
-// experience data
-const experience = {
-  icon: '/assets/resume/badge.svg',
-  title: "My Experience",
-  desc: `I'm working as a graphic designer since I am Year 2 in University`,
-  items: [
-    {
-      company: 'Privata Company',
-      position: 'UX/UI',
-      duration: '2023 - Present',
-    },
-    {
-      company: 'Privata Company',
-      position: 'Motion Graphic',
-      duration: '2022 - Present',
-    },
-    {
-      company: 'Privata Company',
-      position: 'Graphic Design',
-      duration: '2020 - Present',
-    },
-  ]
-}
 
-// education data
-const education = {
-  icon: '/assets/resume/cap.svg',
-  title: "My Education",
-  desc: 'These are my education',
-  items: [
-    {
-      institution: 'National Institute Of Business',
-      degree: 'Information Technology',
-      duration: '2018 - 2024',
-    },
-    {
-      institution: 'Hunsen Phnom Penh Thmey High school',
-      degree: 'High School',
-      duration: '2015 - 2018',
-    },
-    {
-      institution: 'Hunsen Phnom Penh Thmey High school',
-      degree: 'Secondary School',
-      duration: '2012 - 2015',
-    },
-    {
-      institution: 'Phnom Penh Thmey Primary School',
-      degree: 'Primary School',
-      duration: '2006 - 2012',
-    },
-  ]
-}
 
 export default function Resume() {
   return <motion.div
