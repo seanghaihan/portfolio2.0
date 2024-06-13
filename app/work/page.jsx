@@ -16,38 +16,32 @@ import WorkSliderButton from "@/components/WorkSliderButton"
 const projects = [
   {
     num: '01',
-    category: 'Frontend',
-    title: 'Project 1',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, nulla!',
-    stack: [{ name: 'Html 5' }, { name: 'Css 3' }, { name: 'Javascript' }],
-    image: '/assets/work/thumb1.png',
-    live: '',
-    github: '',
-
+    category: 'UX/UI',
+    title: 'UX/UI',
+    desc: '99KBET is an online casino and sports betting platform.',
+    stack: [{ name: 'Figma' },],
+    image: 'https://mir-s3-cdn-cf.behance.net/project_modules/1400/8b49e7198643749.66666baa15e94.png',
+    live: 'https://www.behance.net/gallery/198643749/99kbet-UI-Design',
   },
   {
     num: '02',
-    category: 'Fullstack',
-    title: 'Project 1',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, nulla!',
-    stack: [{ name: 'Html 5' }, { name: 'Css 3' }, { name: 'Javascript' }],
-    image: '/assets/work/thumb2.png',
-    live: '',
-    github: '',
-
+    category: 'Graphic Design',
+    title: 'Logos Design',
+    desc: 'Logos Collection for Local Business and Online industry.',
+    stack: [{ name: 'Photoshop' }, { name: 'Illustrator' }],
+    image: 'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/b62b84196261207.6620a86a67e15.jpg',
+    live: 'https://www.behance.net/gallery/196261207/Logos-Collection-Btongheng',
   },
   {
     num: '03',
-    category: 'UX/UI',
-    title: 'Project 1',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, nulla!',
+    category: 'Graphic Design',
+    title: 'Social Media Post',
+    desc: 'Social Media poster.',
     stack: [
-      { name: 'Figma' }
+      { name: 'Photoshop' },
     ],
-    image: '/assets/work/thumb3.png',
-    live: '',
-    github: '',
-
+    image: 'https://i.pinimg.com/564x/29/1a/5d/291a5d17f6a2009f793c5c012f6daa6f.jpg',
+    live: 'https://www.behance.net/gallery/200834151/Social-Media-Post',
   },
 ]
 
@@ -77,7 +71,7 @@ export default function Work() {
                 {project.num}
               </div>
               {/* project category */}
-              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-300 capitalize">{project.category} Project</h2>
+              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-300 capitalize">{project.title}</h2>
               {/* project desc */}
               <p className="text-white/60">{project.desc}</p>
               {/* stack */}
@@ -95,20 +89,20 @@ export default function Work() {
               {/* button */}
               <div className="flex gap-4">
                 {/* live project button */}
-                <Link href={project.live}>
+                <Link href={project.live} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
                         <BsArrowUpRight className="group-hover:text-accent transition-all duration-300 text-3xl" />
                       </TooltipTrigger>
                       <TooltipContent>
-                        <p>Live Project</p>
+                        <p>Project</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
                 {/* github project button */}
-                <Link href={project.github}>
+                {/* <Link href={project.github}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -119,7 +113,7 @@ export default function Work() {
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
@@ -132,18 +126,22 @@ export default function Work() {
               {projects.map((item, index) => (
                 <SwiperSlide key={index}>
                   <div className="h-[460px] relative group flex justify-center items-center bg-white/10">
-                   {/* overlay */}
-                   <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
-                   {/* image */}
-                   <div className="relative w-full h-full">
-                   <Image src={item.image} fill objectFit="cover" />
-                   </div>
+                    {/* overlay */}
+                    <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
+                    {/* image */}
+                    <div className="relative w-full h-full">
+                      <Image src={item.image} fill style={{
+                        objectFit: 'cover', // cover, contain, none
+                      }}
+                      />
+
+                    </div>
                   </div>
                 </SwiperSlide>
               ))}
               {/* slider button */}
               <WorkSliderButton containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] lg:bottom-0 z-20 w-full justify-between lg:w-max lg:justify-none"
-              btnStyles="bg-accent text-primary hover:bg-accent-hover text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all" />
+                btnStyles="bg-accent text-primary hover:bg-accent-hover text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all" />
             </Swiper>
           </div>
         </div>
